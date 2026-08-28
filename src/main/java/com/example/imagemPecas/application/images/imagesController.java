@@ -1,4 +1,4 @@
-package com.example.imagemPecas.appication.images;
+package com.example.imagemPecas.application.images;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

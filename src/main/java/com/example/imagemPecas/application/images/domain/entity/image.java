@@ -1,4 +1,4 @@
-package com.example.imagemPecas.appication.images.domain.entity;
+package com.example.imagemPecas.application.images.domain.entity;
 import com.example.imagemPecas.domain.enums.ImageExtension;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
