@@ -2,6 +2,7 @@ package com.example.imagemPecas.application.images.domain.entity;
 import com.example.imagemPecas.domain.enums.ImageExtension;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
@@ -15,7 +16,8 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class image {
+@Builder
+public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -34,4 +36,5 @@ public class image {
     @Column
     @Lob
     private byte[] file;
+
 }
