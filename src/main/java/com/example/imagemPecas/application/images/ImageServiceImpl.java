@@ -1,12 +1,14 @@
 package com.example.imagemPecas.application.images;
 
 import com.example.imagemPecas.application.images.domain.entity.Image;
+import com.example.imagemPecas.domain.enums.ImageExtension;
 import com.example.imagemPecas.domain.service.ImageService;
 import com.example.imagemPecas.infra.repository.ImageRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -26,5 +28,10 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public Optional<Image> getById(String id){
         return repository.findById(id);
+    }
+
+    @Override
+    public List<Image> search(ImageExtension extension, String query) {
+        return repository.findByExtensionAndNameOrTagsLike(extension,query);
     }
 }
